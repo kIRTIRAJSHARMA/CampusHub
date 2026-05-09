@@ -1,0 +1,27 @@
+{
+  "name": "Lost page 404",
+  "duration": 3,
+  "loop": true,
+  "sceneClass": "mx-auto max-w-sm",
+  "elements": [
+    {
+      "type": "text",
+      "className": "absolute left-1/2 top-8 -translate-x-1/2 text-8xl font-extrabold text-blue-100",
+      "animate": { "y": [0, -10, 0] },
+      "transition": { "duration": 3, "repeat": null, "ease": "easeInOut" },
+      "content": "404"
+    },
+    {
+      "type": "circle",
+      "className": "absolute left-1/2 top-20 h-20 w-20 -translate-x-1/2 rounded-full bg-orange-400",
+      "animate": { "x": [-42, 42, -42], "scale": [1, 0.85, 1] },
+      "transition": { "duration": 3.4, "repeat": null, "ease": "easeInOut" }
+    },
+    {
+      "type": "bar",
+      "className": "absolute bottom-12 left-1/2 h-2 w-44 -translate-x-1/2 rounded-full bg-slate-200",
+      "animate": { "scaleX": [0.75, 1, 0.75] },
+      "transition": { "duration": 3.4, "repeat": null, "ease": "easeInOut" }
+    }
+  ]
+}

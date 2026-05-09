@@ -1,0 +1,27 @@
+{
+  "name": "Payment failed alert",
+  "duration": 1.8,
+  "loop": true,
+  "sceneClass": "mx-auto max-w-xs",
+  "elements": [
+    {
+      "type": "circle",
+      "className": "absolute left-1/2 top-6 h-32 w-32 -translate-x-1/2 rounded-full bg-red-100",
+      "animate": { "scale": [1, 1.05, 1] },
+      "transition": { "duration": 2.2, "repeat": null, "ease": "easeInOut" }
+    },
+    {
+      "type": "text",
+      "className": "absolute left-1/2 top-11 -translate-x-1/2 text-7xl font-extrabold text-red-500",
+      "animate": { "x": [0, -4, 4, -4, 0], "opacity": 1 },
+      "transition": { "duration": 1.8, "repeat": null, "ease": "easeInOut" },
+      "content": "!"
+    },
+    {
+      "type": "bar",
+      "className": "absolute bottom-10 left-1/2 h-3 w-32 -translate-x-1/2 rounded-full bg-red-200",
+      "animate": { "width": ["5rem", "8rem", "5rem"] },
+      "transition": { "duration": 2.4, "repeat": null, "ease": "easeInOut" }
+    }
+  ]
+}

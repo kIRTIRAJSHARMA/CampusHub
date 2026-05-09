@@ -1,0 +1,9 @@
+import express from "express";
+import { createReview, listReviews } from "../controllers/reviewController.js";
+import { protect } from "../middleware/authMiddleware.js";
+
+const router = express.Router();
+
+router.route("/").get(listReviews).post(protect, createReview);
+
+export default router;

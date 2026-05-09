@@ -1,0 +1,38 @@
+{
+  "name": "Empty listings search",
+  "duration": 2.5,
+  "loop": true,
+  "sceneClass": "mx-auto max-w-sm",
+  "elements": [
+    {
+      "type": "circle",
+      "className": "absolute left-1/2 top-6 h-28 w-28 -translate-x-1/2 rounded-full bg-blue-100",
+      "animate": { "scale": [1, 1.08, 1] },
+      "transition": { "duration": 2.8, "repeat": null, "ease": "easeInOut" }
+    },
+    {
+      "type": "card",
+      "className": "absolute left-1/2 top-14 h-28 w-44 -translate-x-1/2 rounded-2xl border border-slate-200 bg-white shadow-soft",
+      "animate": { "y": [0, -8, 0] },
+      "transition": { "duration": 3, "repeat": null, "ease": "easeInOut" }
+    },
+    {
+      "type": "bar",
+      "className": "absolute left-[calc(50%-64px)] top-24 h-3 w-28 rounded-full bg-slate-200",
+      "animate": { "width": ["5rem", "7rem", "5rem"] },
+      "transition": { "duration": 2.4, "repeat": null, "ease": "easeInOut" }
+    },
+    {
+      "type": "bar",
+      "className": "absolute left-[calc(50%-64px)] top-32 h-3 w-20 rounded-full bg-orange-200",
+      "animate": { "width": ["3rem", "5rem", "3rem"] },
+      "transition": { "duration": 2.2, "repeat": null, "ease": "easeInOut" }
+    },
+    {
+      "type": "circle",
+      "className": "absolute right-20 top-20 h-10 w-10 rounded-full border-4 border-blue-500",
+      "animate": { "rotate": [0, 20, 0], "scale": [1, 1.12, 1] },
+      "transition": { "duration": 2.6, "repeat": null, "ease": "easeInOut" }
+    }
+  ]
+}
