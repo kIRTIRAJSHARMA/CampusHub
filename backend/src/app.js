@@ -13,13 +13,13 @@ import userRoutes from "./routes/userRoutes.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
 const app = express();
+const productionClientUrl = "https://campushub-marketplace.netlify.app";
 const allowedClientUrl = process.env.CLIENT_URL;
-const allowedOriginPattern = /^http:\/\/(localhost|127\.0\.0\.1|192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3}):5173$/;
 
 app.use(helmet());
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || origin === allowedClientUrl || allowedOriginPattern.test(origin)) {
+    if (!origin || origin === productionClientUrl || origin === allowedClientUrl) {
       callback(null, true);
       return;
     }

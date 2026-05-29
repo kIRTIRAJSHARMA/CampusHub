@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const defaultApiUrl =
-  typeof window !== "undefined"
-    ? `${window.location.protocol}//${window.location.hostname}:5000/api`
-    : "http://127.0.0.1:5000/api";
+const productionApiUrl = "https://campushub-api-pyty.onrender.com";
+const configuredApiUrl = import.meta.env.VITE_API_URL || productionApiUrl;
+const apiBaseUrl = configuredApiUrl.endsWith("/api")
+  ? configuredApiUrl
+  : `${configuredApiUrl.replace(/\/$/, "")}/api`;
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || defaultApiUrl,
+  baseURL: apiBaseUrl,
 });
 
 api.interceptors.request.use((config) => {
