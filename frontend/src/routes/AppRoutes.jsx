@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import Home from "../pages/home/Home";
@@ -28,6 +28,13 @@ import Terms from "../pages/extra/Terms";
 import NotFound from "../pages/extra/NotFound";
 import { useAuth } from "../context/AuthContext";
 
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated } = useAuth();
+  const location = useLocation();
+
+  return isAuthenticated ? children : <Navigate to="/login" replace state={{ from: location }} />;
+};
+
 const SellerRoute = ({ children }) => {
   const { user } = useAuth();
   return user?.role === "seller" || user?.role === "admin" ? children : <Navigate to="/products" replace />;
@@ -43,7 +50,7 @@ const AppRoutes = () => (
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/products/:id" element={<ProtectedRoute><ProductDetails /></ProtectedRoute>} />
         <Route path="/products/payment" element={<ProductPayment />} />
         <Route path="/products/payment/success" element={<PaymentSuccess />} />
         <Route path="/products/payment/failed" element={<PaymentFailed />} />
