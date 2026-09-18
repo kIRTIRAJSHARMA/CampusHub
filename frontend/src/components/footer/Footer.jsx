@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 import { useAuth } from "../../context/AuthContext";
+import logo from "../../assets/animations/logo.png";
 
 const Footer = () => {
   const { user } = useAuth();
@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container-page grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-blue-600 to-orange-500 font-extrabold text-white">CH</span>
+            <img src={logo} alt="CampusHub" className="h-10 w-10 rounded-xl object-contain" />
             <span className="text-xl font-extrabold">CampusHub</span>
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-600">A student-first marketplace for everyday campus needs, trusted rentals, and faster local deals.</p>
@@ -37,9 +37,6 @@ const Footer = () => {
           <div className="mt-4 grid gap-3 text-sm text-slate-600">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms & Conditions</Link>
-          </div>
-          <div className="mt-5 flex gap-3 text-slate-500">
-            <FiInstagram /><FiTwitter /><FiLinkedin />
           </div>
         </div>
       </div>

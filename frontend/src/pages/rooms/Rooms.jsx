@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
-import { FiCheckCircle } from "react-icons/fi";
 import JsonAnimation from "../../components/animations/JsonAnimation";
 import RoomCard from "../../components/cards/RoomCard";
 import SectionHeader from "../../components/common/SectionHeader";
@@ -74,11 +73,6 @@ const Rooms = () => {
             <p className="mt-2 text-sm text-slate-600">Sellers must accept charges and complete payment before rooms appear publicly.</p>
           </div>
         )}
-        <div className="mt-12 grid gap-4 rounded-2xl bg-orange-50 p-6 md:grid-cols-4">
-          {["Better visibility", "Featured placement", "More student reach", "Faster rental chances"].map((benefit) => (
-            <div key={benefit} className="flex items-center gap-3 font-bold text-slate-800"><FiCheckCircle className="text-orange-600" /> {benefit}</div>
-          ))}
-        </div>
       </section>
     </div>
   );

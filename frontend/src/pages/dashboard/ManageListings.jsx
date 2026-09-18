@@ -121,7 +121,6 @@ const ManageListings = () => {
   return (
     <div className="container-page py-10">
       <h1 className="text-3xl font-extrabold">Manage Listings</h1>
-      <p className="mt-2 text-sm text-slate-600">Seller view: your real product drafts, active products, room drafts, and paid room listings.</p>
       <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft">
         {loading ? (
           <div className="p-8 text-center text-sm text-slate-500">Loading your listings...</div>

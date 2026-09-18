@@ -56,9 +56,6 @@ const Home = () => {
             <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-6xl">
               Buy, sell, rent, and exchange inside your student community.
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-              Buyers discover real seller listings from MongoDB. Sellers can publish products and paid room ads with photos.
-            </p>
             <form onSubmit={handleSearch} className="mt-8 rounded-2xl border border-slate-200 bg-white p-2 shadow-soft sm:flex">
               <div className="flex flex-1 items-center gap-3 px-4 py-3">
                 <FiSearch className="text-slate-400" />

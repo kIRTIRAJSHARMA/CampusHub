@@ -35,11 +35,6 @@ const RoomPayment = () => {
           <p className="font-bold text-blue-600">Step 5 of 6</p>
           <h1 className="mt-2 text-3xl font-extrabold">Pay {formatCurrency(amount)} Listing Charge</h1>
           <p className="mt-3 text-slate-600">This room listing charge is calculated from the {promoted ? "30%" : "20%"} platform commission and must be accepted before publishing.</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {["Better visibility", "Featured placement", "More student reach", "Faster rental chances"].map((item) => (
-              <div key={item} className="rounded-2xl bg-blue-50 p-5 font-bold text-slate-800">{item}</div>
-            ))}
-          </div>
           <div className="mt-8 rounded-2xl border border-slate-200 p-5">
             <h2 className="font-extrabold">Payment Method</h2>
             <div className="mt-4 grid gap-3">

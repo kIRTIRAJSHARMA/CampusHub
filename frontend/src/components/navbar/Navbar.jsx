@@ -4,6 +4,7 @@ import { FiChevronDown, FiLogOut, FiMenu, FiSearch, FiShoppingBag, FiUser, FiX }
 import { useAuth } from "../../context/AuthContext";
 import NotificationBell from "../notifications/NotificationBell";
 import { getAvatar } from "../../utils/avatar";
+import logo from "../../assets/animations/logo.png";
 
 const navItems = [
   { label: "Marketplace", path: "/products" },
@@ -36,7 +37,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
       <nav className="container-page flex min-h-[72px] items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-2">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-blue-600 to-orange-500 font-extrabold text-white">CH</span>
+          <img src={logo} alt="CampusHub" className="h-10 w-10 rounded-xl object-contain" />
           <span className="text-xl font-extrabold text-slate-950">CampusHub</span>
         </Link>
 

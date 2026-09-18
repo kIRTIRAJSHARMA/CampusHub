@@ -86,7 +86,7 @@ const seed = async () => {
     message: "Is this available for a visit today?",
   });
 
-  console.log("Seed data created. Demo login: seller@campushub.in / password123");
+  console.log("Seed data created.");
   await mongoose.connection.close();
 };
 

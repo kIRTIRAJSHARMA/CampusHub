@@ -61,7 +61,6 @@ const AddRoom = () => {
     <div className="container-page py-10">
       <div className="mb-8 rounded-3xl bg-gradient-to-r from-orange-500 to-blue-600 p-6 text-white shadow-soft">
         <h1 className="text-3xl font-extrabold">List Your Room</h1>
-        <p className="mt-2 text-white/80">Add details, upload real photos, review commission charges, pay, and publish.</p>
       </div>
       <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
         <form className="card grid gap-4 p-6" onSubmit={handleSubmit}>
@@ -135,12 +134,6 @@ const AddRoom = () => {
           </label>
           <button className="btn-primary" type="submit">Continue to Payment <FiArrowRight /></button>
         </form>
-        <aside className="card h-fit p-6">
-          <h2 className="text-xl font-extrabold">Listing Benefits</h2>
-          <div className="mt-4 grid gap-3 text-sm font-bold text-slate-700">
-            <p>Better visibility</p><p>Featured placement</p><p>More student reach</p><p>Faster rental chances</p>
-          </div>
-        </aside>
       </div>
     </div>
   );
